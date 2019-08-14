@@ -1,0 +1,10 @@
+target
+metastore_db
+spark-warehouse
+out
+.idea
+*.iml
+.settings
+.project
+.classpath
+
