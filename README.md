@@ -44,7 +44,7 @@ val catalog = s"""{
 ```
 If fields of dataframe are not appeared in catalog, an exception will throw. 
 
-Option 'error_if_field_unmapped' can be setted to false to avoid exception. 
+Option 'error_if_field_unmapped' can be set to false to avoid exception. 
 
 ## Read from Hbase
 

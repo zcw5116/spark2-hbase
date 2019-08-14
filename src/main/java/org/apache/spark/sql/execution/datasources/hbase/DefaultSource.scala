@@ -19,8 +19,7 @@
 package org.apache.spark.sql.execution.datasources.hbase
 
 import java.sql.Timestamp
-
-import com.google.gson.{JsonElement, JsonObject, JsonParser}
+import com.google.gson.JsonParser
 import org.apache.commons.lang3.StringUtils
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.hbase._
