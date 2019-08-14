@@ -85,3 +85,7 @@ val df1 = spark.read
 If hbase columns are not mapped to DataFrame Fields, these columns are collected to one column defined by option 'columns_unmapped_to_field'.
 
 If option 'columns_unmapped_to_field' is not assigned, then these columns are dropped.
+
+git push -u origin_gitee master
+
+git push -u origin master
