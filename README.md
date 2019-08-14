@@ -22,8 +22,9 @@ val catalog = s"""{
                      |}
                      |}""".stripMargin
 ```
-rowkey is mapping to dataframe field 'myrowkey'
-columns is defined for mapping dataframe fields to hbase columns 
+'rowkey' is mapping to dataframe field 'myrowkey'
+
+'columns' is defined for mapping dataframe fields to hbase columns 
 
 
 - Write DataFrame to Hbase
@@ -42,14 +43,16 @@ columns is defined for mapping dataframe fields to hbase columns
       .save()
 ```
 If fields of dataframe are not appeared in catalog, an exception will throw. 
+
 Option 'error_if_field_unmapped' can be setted to false to avoid exception. 
 
 ## Read from Hbase
 
 - Define catalog
 
-rowkey is mapping to dataframe field 'myrowkey'
-columns is defined for mapping dataframe fields to hbase columns 
+'rowkey' is mapping to dataframe field 'myrowkey'
+
+'columns' is defined for mapping dataframe fields to hbase columns 
 
 
 ```
