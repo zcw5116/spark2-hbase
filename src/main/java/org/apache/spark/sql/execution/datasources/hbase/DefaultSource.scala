@@ -38,6 +38,9 @@ import org.joda.time.DateTime
 
 import scala.collection.mutable
 
+/**
+  * Created by zhoucw on 2019-08-12 21:24.
+  */
 class DefaultSource extends RelationProvider with CreatableRelationProvider with DataSourceRegister {
 
   override def createRelation(sqlContext: SQLContext, parameters: Map[String, String]): BaseRelation =
@@ -50,7 +53,7 @@ class DefaultSource extends RelationProvider with CreatableRelationProvider with
     mode: SaveMode,
     parameters: Map[String, String],
     data: DataFrame): BaseRelation = {
-    val relation = InsertHBaseRelation(data, parameters)(sqlContext)
+    val relation = InsertHBaseRelation(data, parameters, mode)(sqlContext)
     relation.createTable(parameters.getOrElse("numReg", "3").toInt)
     relation.insert(data, false)
     relation
@@ -59,7 +62,8 @@ class DefaultSource extends RelationProvider with CreatableRelationProvider with
 
 case class InsertHBaseRelation(
   dataFrame: DataFrame,
-  parameters: Map[String, String]
+  parameters: Map[String, String],
+  mode: SaveMode
 )(@transient val sqlContext: SQLContext)
   extends BaseRelation
   with InsertableRelation

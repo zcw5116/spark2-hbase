@@ -2,6 +2,9 @@ package org.apache.spark.sql.execution.datasources.hbase
 
 import org.apache.hadoop.conf.Configuration
 
+/**
+  * Created by zhoucw on 2019-08-09 21:24.
+  */
 object SparkHBaseConf {
   val testConf = "spark.hbase.connector.test"
   val credentialsManagerEnabled = "spark.hbase.connector.security.credentials.enabled"

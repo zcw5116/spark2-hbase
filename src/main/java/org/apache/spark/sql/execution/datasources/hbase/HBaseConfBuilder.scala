@@ -8,8 +8,8 @@ import org.json4s.DefaultFormats
 import scala.collection.JavaConversions._
 
 /**
- *
- */
+  * Created by zhoucw on 2019-08-09 21:24.
+  */
 object HBaseConfBuilder {
   def build(spark: SparkSession, parameters: Map[String, String]): Configuration = {
     val testConf = spark.sqlContext.sparkContext.conf.getBoolean(SparkHBaseConf.testConf, false)

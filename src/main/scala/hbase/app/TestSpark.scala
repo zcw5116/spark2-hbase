@@ -3,7 +3,7 @@ package hbase.app
 import org.apache.spark.sql.SparkSession
 
 /**
-  * Created on 2019-08-09 10:30.
+  * Created by zhoucw on 2019-08-09 21:24.
   */
 object TestSpark {
   def main(args: Array[String]): Unit = {
