@@ -75,7 +75,7 @@ case class InsertHBaseRelation(
 
   def hbaseConf: Configuration = wrappedConf.value
 
-  val jHtable = parameters("table_name")
+  val jHtable = parameters("htable")
   val catalog = parameters("catalog")
 
   val errorIfFieldUnmapping = parameters.contains("error_if_field_unmapped") match {
@@ -268,7 +268,7 @@ case class HBaseRelation(
   with Logging {
 
   val catalog = parameters("catalog")
-  val inputTableName = parameters("table_name")
+  val inputTableName = parameters("htable")
   val jNameSpace = parameters.contains("namespace") match {
     case true => parameters("namespace")
     case false => "default"

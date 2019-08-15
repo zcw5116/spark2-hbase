@@ -50,7 +50,5 @@ object TestSpark {
 
     df1.show(false)
 
-
-
   }
 }

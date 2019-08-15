@@ -21,12 +21,12 @@
         <scala.version>2.11.8</scala.version>
         <scala.binary.version>2.11</scala.binary.version>
         <java.version>1.8</java.version>
-        <spark.version>2.4.3</spark.version>
-        <hadoop.scope>compile</hadoop.scope> <!-- compile provided  -->
-        <spark.scope>compile</spark.scope>
+        <spark.version>2.3.2</spark.version>
+        <hadoop.scope>provided</hadoop.scope> <!-- compile provided  -->
+        <spark.scope>provided</spark.scope>
         <hbase.scope>compile</hbase.scope>
-        <hadoop.version>2.6.0-cdh5.13.0</hadoop.version>
-        <hbase.version>1.2.0-cdh5.13.0</hbase.version>
+        <hadoop.version>2.6.0-cdh5.13.0</hadoop.version> <!-- 2.6.0-cdh5.13.0  -->
+        <hbase.version>1.2.0-cdh5.13.0</hbase.version> <!-- 1.2.0-cdh5.13.0  -->
     </properties>
     <dependencies>
         <dependency>
@@ -180,10 +180,12 @@
                     <artifactId>hadoop-hdfs</artifactId>
                     <groupId>org.apache.hadoop</groupId>
                 </exclusion>
+                <!--
                 <exclusion>
                     <artifactId>hadoop-mapreduce-client-core</artifactId>
                     <groupId>org.apache.hadoop</groupId>
                 </exclusion>
+                -->
                 <exclusion>
                     <artifactId>hadoop-client</artifactId>
                     <groupId>org.apache.hadoop</groupId>
