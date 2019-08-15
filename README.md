@@ -34,7 +34,7 @@ val catalog = s"""{
 
      df.write
       .options(Map(
-        "table_name" -> tableName,
+        "htable" -> tableName,
         "error_if_field_unmapped" -> "false",
         "catalog" -> catalog,
         "zk" -> "localhost:2181"
@@ -74,7 +74,7 @@ val df1 = spark.read
       .options(
       Map(
         "columns_unmapped_to_field"->"myunn",
-        "table_name" -> tableName,
+        "htable" -> tableName,
         "catalog" -> catalog
       )
     ).load()
