@@ -25,7 +25,7 @@
         <hadoop.scope>provided</hadoop.scope> <!-- compile provided  -->
         <spark.scope>provided</spark.scope>
         <hbase.scope>provided</hbase.scope>
-        <hadoop.version>2.6.0-cdh5.13.0</hadoop.version> <!-- 2.6.0-cdh5.13.0  -->
+        <hadoop.version>3.2.3</hadoop.version> <!-- 2.6.0-cdh5.13.0  -->
         <hbase.version>1.2.0-cdh5.13.0</hbase.version> <!-- 1.2.0-cdh5.13.0  -->
     </properties>
     <dependencies>
